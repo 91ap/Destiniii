@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Destiniii" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -47,6 +47,9 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Choice 1" cornerStyle="large">
                                             <color key="baseBackgroundColor" red="0.52549022440000004" green="0.41176474089999998" blue="0.49411764740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pC-4z-8WQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-gy-kIX">
                                         <rect key="frame" x="0.0" y="657" width="361" height="102"/>
@@ -59,6 +62,9 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Choice 2" cornerStyle="large">
                                             <color key="baseBackgroundColor" red="0.21960783" green="0.2941176593" blue="0.5176470876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jON-XB-Qsd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -75,7 +81,6 @@
                             <constraint firstItem="VlC-XI-VnY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DJy-sf-pCO"/>
                             <constraint firstItem="ZY0-ZE-eps" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PLn-t4-WDL"/>
                             <constraint firstItem="VlC-XI-VnY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wzd-Tv-sZJ"/>
-                            <constraint firstItem="VlC-XI-VnY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XY3-1x-7gt"/>
                             <constraint firstItem="ZY0-ZE-eps" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eD4-rj-pKc"/>
                             <constraint firstItem="ZY0-ZE-eps" firstAttribute="centerX" secondItem="VlC-XI-VnY" secondAttribute="centerX" id="z0K-6k-Fcp"/>
                         </constraints>
