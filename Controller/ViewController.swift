@@ -17,51 +17,32 @@ class ViewController: UIViewController {
 //    let choice1 = "You decide to venture deeper into the forest."
 //    let choice2 = "Take a shortcut through the dense undergrowth."
     
-   var whatToDo = StoryBrain()
+    var whatToDo = StoryBrain()
+    var storyNumber = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        updateUI()
         
-        storyLabel.text = whatToDo.stories[0].storyTitle
-        choice1Button.setTitle(whatToDo.stories[0].choice1, for: .normal)
-        choice2Button.setTitle(whatToDo.stories[0].choice2, for: .normal)
-        choice1Button.tag = 1
-        choice2Button.tag = 2
-        // Do any additional setup after loading the view.
+        storyLabel.text = whatToDo.stories[0].title
+             choice1Button.setTitle(whatToDo.stories[0].choice1, for: .normal)
+             choice2Button.setTitle(whatToDo.stories[0].choice2, for: .normal)
+             choice1Button.tag = 1
+             choice2Button.tag = 2
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
-       
-        switch sender.tag {
-            case 1:
-                updateUI(forChoice: 1)
-            case 2:
-                updateUI(forChoice: 2)
-            default:
-                return 
-                
-        }
-        
-        
-        
+
+        whatToDo.nextStory(userChoice: sender.currentTitle!)
+               
+               updateUI()
     }
     
     
-    func updateUI(forChoice choice: Int) {
-        
-        if choice == 1 {
-            storyLabel.text = whatToDo.stories[1].storyTitle
-            choice1Button.setTitle(whatToDo.stories[1].choice1, for: .normal)
-            choice2Button.setTitle(whatToDo.stories[1].choice2, for: .normal)
-            print("\(whatToDo.stories[1].storyTitle)")
-        } else if choice == 2 {
-            storyLabel.text = whatToDo.stories[2].storyTitle
-            choice1Button.setTitle(whatToDo.stories[2].choice2, for: .normal)
-            choice2Button.setTitle(whatToDo.stories[2].choice1, for: .normal)
-            print("\(whatToDo.stories[2].storyTitle)")
-        }
-        
+    func updateUI() {
+        storyLabel.text = whatToDo.getStoryTitle()
+              choice1Button.setTitle(whatToDo.getChoice1(), for: .normal)
+              choice2Button.setTitle(whatToDo.getChoice2(), for: .normal)
     }
     
 
